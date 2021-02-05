@@ -8,7 +8,7 @@ server.use(express.json())
 server.use(cors({origin: true, credentials: true }))
 
 server.get("/", (req, res) => {
-    res.json({message: "Server is running"})
+    res.json({message: "Server is running", port: process.env.PORT})
 })
 
 //routes
